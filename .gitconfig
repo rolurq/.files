@@ -1,0 +1,31 @@
+[user]
+  email = rolurquiza@gmail.com
+  name = Rolando Urquiza
+
+[alias]
+  lol = log --graph --pretty=oneline --decorate --abbrev-commit
+  lola = log --graph --pretty=oneline --decorate --abbrev-commit --all
+  dgrep = grep -n --max-depth -1
+  devil = daemon --reuseaddr --verbose --base-path=/home/rolurq/projects --export-all
+  lola80 = log --graph --decorate --pretty=format:\"%C(yellow)%h %Cred%cr %Cblue(%an)%C(white)%d%Creset %s\" --abbrev-commit --all
+
+[core]
+  editor = vim
+
+[color "status"]
+	changed = red bold
+	untracked = red bold
+	added = green bold
+[color "branch"]
+	current = green bold
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[merge]
+	tool = smerge
+[merge "smerge"]
+	cmd = smerge mergetool
