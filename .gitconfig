@@ -13,19 +13,19 @@
   editor = vim
 
 [color "status"]
-	changed = red bold
-	untracked = red bold
-	added = green bold
+  changed = red bold
+  untracked = red bold
+  added = green bold
 [color "branch"]
-	current = green bold
+  current = green bold
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [merge]
-	tool = smerge
+  tool = smerge
 [merge "smerge"]
-	cmd = smerge mergetool
+  cmd = smerge mergetool
